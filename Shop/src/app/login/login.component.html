@@ -1,0 +1,15 @@
+
+<h2>Provide your Credentials for Login!!</h2>
+<div>
+  <form #loginForm = "ngForm" (ngSubmit)="dologin(loginForm.value)">
+<mat-form-field appearance="fill">
+  <mat-label>Username</mat-label>
+  <input matInput name = "username" ngModel>
+</mat-form-field><br>
+<mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput name = "password" ngModel>
+  </mat-form-field><br>
+  <button mat-raised-button color="primary">Login</button>
+</form>
+</div>

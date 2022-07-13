@@ -1,0 +1,49 @@
+button {
+    margin-left: 600px;
+}
+
+/* .app-products {
+
+    display: grid;
+
+}
+
+.app-product-item{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.product-info-area{
+    margin-top: 10px;
+    padding: 5px;
+}
+
+
+
+.mat-card {
+    margin: 5px;
+    height: 200px;
+    max-height: 100%;
+    min-width: 300px;
+}
+
+.product-img{
+    width: 150px;
+    height: 190px;
+    margin: 10px;
+    object-fit: contain;
+} */
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .item {
+    width: 32%;
+    padding-bottom: 2%; /* 32:18, i.e. 16:9 */
+    margin-bottom: 2%; /* (100-32*3)/2 */
+  }

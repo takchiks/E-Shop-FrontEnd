@@ -1,0 +1,14 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.bg-color{
+  background-color: blue;
+  color: white;
+}
+
+a{
+  text-decoration: none;
+  margin-left: 20px;
+  color: white;
+}

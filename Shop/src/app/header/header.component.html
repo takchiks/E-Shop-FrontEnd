@@ -1,0 +1,16 @@
+<p>
+  <mat-toolbar color="primary">
+    <a routerLink="">
+    <span>ESHOP</span>
+  </a>
+    <span class="example-spacer"></span>
+    <a (click) = "showWishList()" style="margin-right: 10px" mat-icon-button class="example-icon favorite-icon" aria-label="Example icon-button with heart icon">
+      <mat-icon>favorite</mat-icon>
+    </a>
+    <mat-icon style="margin-right: 10px">shopping_cart</mat-icon>
+    
+    <a *ngIf="!isLoggedin" routerLink="/login">Login</a>
+    <a *ngIf="isLoggedin" (click) =logout()>Logout</a>
+    <a routerLink="/register">Register</a>
+  </mat-toolbar>
+</p>

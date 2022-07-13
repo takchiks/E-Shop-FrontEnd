@@ -1,0 +1,31 @@
+
+<h2>Provide your Details to Register with us!!</h2>
+<div>
+  <form #registerForm ="ngForm" (ngSubmit) = "register(registerForm.value)">
+    <mat-form-field appearance="fill">
+        <mat-label>UserName</mat-label>
+        <input matInput name="username" ngModel>
+      </mat-form-field><br>
+<mat-form-field appearance="fill">
+  <mat-label>First Name</mat-label>
+  <input matInput name="firstName" ngModel>
+</mat-form-field><br>
+<mat-form-field appearance="fill">
+    <mat-label>Last Name</mat-label>
+    <input matInput name="lastName" ngModel>
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Password</mat-label>
+    <input matInput name="password" ngModel>
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Phone</mat-label>
+    <input matInput name="phone" ngModel>
+  </mat-form-field><br>
+  <mat-form-field appearance="fill">
+    <mat-label>Email</mat-label>
+    <input matInput name="email" ngModel>
+  </mat-form-field><br>
+  <button mat-raised-button color="primary">Register</button>
+  </form>
+</div>
