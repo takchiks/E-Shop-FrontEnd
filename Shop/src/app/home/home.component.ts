@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../product.service';
 import { Router } from '@angular/router';
 import { WishlistService } from '../wishlist.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-home',
@@ -10,38 +11,41 @@ import { WishlistService } from '../wishlist.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  isLoggedin=false;
   //message:any;
     products:any;
 
   constructor(private service:ProductService, private router:Router,
-    private wishListService:WishlistService) {
-    alert("inside const of HomeComponent")
+    private wishListService:WishlistService, private userService:UserService) {
+      console.log("inside const of HomeComponent")
    }
 
   ngOnInit(): void {
-    /*alert("inside ngOnInit of HomeComponent")
-    this.service.getMessage().subscribe(res=> {
-      this.message=res;
-    })*/
+
     this.service.getProducts().subscribe(res=>{
       this.products=res;
     })
 
+    this.userService.currentMessageSubscriber.subscribe(res=>{
+      
+      this.isLoggedin =this.userService.isLoggedIn()
+      console.log(this.isLoggedin+"hero")
+      })
+
   }
 
   moreDetails(id:any) {
-    alert("inside moredetails() "+id)
+    console.log("inside moredetails() "+id)
 
     this.router.navigate([('/pdp/'+id)])
   }
 
   addtoWishList(id:any) {
-    alert("inside addtoWishList() "+id)
+    console.log("inside addtoWishList() "+id)
 
     this.wishListService.addtoWishList(id).subscribe(res=>{
       var message=res;
-      alert(message)
+      console.log(message)
     })
   }
 }

@@ -18,10 +18,11 @@ export class HeaderComponent implements OnInit {
     this.userService.currentMessageSubscriber.subscribe(res=>{
       
     this.isLoggedin =this.userService.isLoggedIn()
+    console.log(this.isLoggedin+"hero")
     })
 
-    this.isLoggedin =this.userService.isLoggedIn()
-    console.log(this.isLoggedin+"hero")
+    // this.isLoggedin =this.userService.isLoggedIn()
+   
 
  
   }
@@ -33,7 +34,8 @@ export class HeaderComponent implements OnInit {
   }
   logout(){
     localStorage.removeItem('token')
-    this.isLoggedin= false
+    
+    this.userService.notify({isRefresh:true});
   }
 
 }

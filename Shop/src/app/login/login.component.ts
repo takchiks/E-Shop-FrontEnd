@@ -17,12 +17,12 @@ export class LoginComponent implements OnInit {
   }
 
   dologin(form:any){
-    alert("The form is holding "+form.username+", "+ form.password)
+    console.log("The form is holding "+form.username+", "+ form.password)
     
     this.service.token(form).subscribe(res=>{
       this.jwtJson =res 
 
-    alert("The token is holding "+this.jwtJson.token)
+    console.log("The token is holding "+this.jwtJson.token)
       let token:string = this.jwtJson.token;
       this.service.loginUser(token)
       // localStorage.setItem("token",token)

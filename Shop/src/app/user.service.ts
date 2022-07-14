@@ -40,6 +40,11 @@ export class UserService {
       return true;
     }
    }
+   logout(){
+     localStorage.removeItem('token')
+     this.isLoggedIn()
+   }
+ 
 
 notify(message: any) {
   this.messageSource.next(this.isLoggedIn().toString())

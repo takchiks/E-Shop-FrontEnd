@@ -19,6 +19,9 @@ import { PdpComponent } from './pdp/pdp.component';
 import { FormsModule }   from '@angular/forms';
 import { AddtoWishListComponent } from './addto-wish-list/addto-wish-list.component';
 import { UpdateComponent } from './update/update.component';
+import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatDividerModule} from '@angular/material/divider';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +45,9 @@ import { UpdateComponent } from './update/update.component';
     MatInputModule,
     HttpClientModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatProgressBarModule,
+    MatDividerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

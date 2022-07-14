@@ -16,7 +16,7 @@ export class PdpComponent implements OnInit {
   ngOnInit(): void {
 
     this.route.paramMap.subscribe(res=> {
-      alert("the data fetched from the url is "+res.get("id"))
+      console.log("the data fetched from the url is "+res.get("id"))
 
       var id = res.get("id");
 
