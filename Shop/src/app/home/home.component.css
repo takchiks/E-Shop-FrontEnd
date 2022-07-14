@@ -45,6 +45,7 @@ div {
   }
   
   .item {
+    min-width: 300px!important;
     width: 32%;
     padding-bottom: 2%; /* 32:18, i.e. 16:9 */
     margin-bottom: 2%; /* (100-32*3)/2 */
